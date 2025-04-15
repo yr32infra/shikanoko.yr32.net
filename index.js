@@ -19,11 +19,11 @@ const transitions = [
 ];
 
 function validate() {
-	for (let i = 0; i < states.length; ++i) {
+	for (const state of states) {
 		let sum = 0.0;
 
 		for (const transition of transitions)
-			if (transition[0] == states[i])
+			if (transition[0] == state)
 				sum += transition[2];
 
 		if (sum != 1.0) return false;
